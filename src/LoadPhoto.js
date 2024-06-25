@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
 function LoadPhoto({
@@ -8,6 +8,7 @@ function LoadPhoto({
   contrast,
   handleBrightnessChange,
   handleContrastChange,
+  handleReset,
 }) {
   const fileInputRef = useRef(null);
 
@@ -24,7 +25,6 @@ function LoadPhoto({
         justifyContent: 'center',
         height: 'calc(100vh - 56px)', // Full height minus the bottom nav height
         textAlign: 'center',
-        mt: -8 // Adjust margin to properly align header
       }}
     >
       <input
@@ -79,6 +79,9 @@ function LoadPhoto({
               />
             </label>
           </div>
+          <Button variant="contained" color="secondary" onClick={handleReset}>
+            Reset
+          </Button>
         </Box>
       )}
     </Box>

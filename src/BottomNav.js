@@ -3,6 +3,7 @@ import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import SettingsIcon from '@mui/icons-material/Settings'; // New icon for the fourth tab
 import { Link, useLocation } from 'react-router-dom';
 
 function BottomNav() {
@@ -41,6 +42,13 @@ function BottomNav() {
         label="Tab 3"
         value="/tab3"
         icon={<LocationOnIcon />}
+      />
+      <BottomNavigationAction
+        component={Link}
+        to="/tab4"
+        label="Settings" // Label for the new tab
+        value="/tab4"
+        icon={<SettingsIcon />} // Icon for the new tab
       />
     </BottomNavigation>
   );
